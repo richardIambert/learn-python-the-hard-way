@@ -1,4 +1,4 @@
-# ex2.py
+# ex2.py - Comments and Pound Characters
 
 # A comment, this is so you can read your program later.
 # Anything after the # is ignored by the Python interpreter.
