@@ -3,7 +3,8 @@
 # Here's some new strange stuff, remember type it exactly.
 
 days = "Mon Tue Wed Thu Fri Sat Sun"
-months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"  # \n escape character represents a newline in a string
+# Escape sequences are used to encode characters into a string that are difficult to type.
+months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"  # The \n escape sequence represents a newline character
 
 print("Here are the days: ", days)
 print("Here are the months: ", months)
