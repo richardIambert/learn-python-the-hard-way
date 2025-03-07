@@ -1,4 +1,5 @@
-# ex1.py
+# ex1.py - A Good First Program
+
 print("Hello World!")
 print("Hello Again")
 print("I like typing this.")
@@ -8,6 +9,7 @@ print("I'd much rather you 'not'.")
 print('I "said" do not touch this.')
 
 # Study Drills
+
 print("Hello, Lilly!")
 
 # In Python, the `#` character is used to create comments.
