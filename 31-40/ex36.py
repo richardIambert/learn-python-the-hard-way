@@ -75,7 +75,7 @@ def pooch_encounter():
 
 def snake_encounter():
     print("BJeezus! A snake!")
-    if "pooch" in player_inventory:
+    if "trusty pooch" in player_inventory:
         print("Your trusty pooch leaps into action!")
         print("Left paw!")
         print("Right paw!")
@@ -96,19 +96,19 @@ def monster_encounter():
 
 def list_start_items():
     print("Start items:")
-    for item, index in start_items:
+    for index, item in enumerate(start_items):
         print(f"{index + 1}. {item}")
 
 
 def list_player_inventory():
     print("Player inventory:")
-    for item, index in player_inventory:
+    for index, item in enumerate(player_inventory):
         print(f"{index + 1}. {item}")
 
 
 def list_merchant_inventory():
     print("Merchant inventory:")
-    for item, index in merchant_inventory:
+    for index, item in enumerate(merchant_inventory):
         print(f"{index + 1}. {item}")
 
 
@@ -122,8 +122,11 @@ def choose_start_items():
         if len(index_numbers) != 3:
             raise ValueError
         for index_number in index_numbers:
-            player_inventory.append(start_items[int(index_number)])
+            player_inventory.append(start_items[int(index_number) - 1])
         list_player_inventory()
+    except IndexError:
+        print("Nope...")
+        return choose_start_items()
     except ValueError:
         print("Nope...")
         return choose_start_items()
@@ -167,4 +170,9 @@ def start():
         "You hear a bang and notice a light shining from the the green bin of horror..."
     )
     print("You go to investigate...")
+    print("A cave!...")
     choose_start_items()
+    two_paths()
+
+
+start()
